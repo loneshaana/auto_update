@@ -9,8 +9,9 @@ const updater                = require('electron-simple-updater');
 updater.init({
   checkUpdateOnStart: false,
   autoDownload: false,
+  url: 'https://github.com/loneshaana/auto_update/blob/master/updates.json'
 });
-
+updater.checkForUpdates();
 let mainWindow;
 
 app.on('ready', () => {
